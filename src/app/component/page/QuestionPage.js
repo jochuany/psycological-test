@@ -2,11 +2,11 @@
 
 import MobileFrame from "../layout/MobileFrame";
 
-export default function QuestionPage() {
+export default function QuestionPage({ questionIndex }) {
     return (
         <>
             <MobileFrame>
-                question page
+                question page: Q{questionIndex}
             </MobileFrame>
         </>
     );
