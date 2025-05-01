@@ -1,7 +1,7 @@
 "use client"
 
 import { DatePicker } from "antd";
-import CalenderPage from "@/app/component/CalenderPage";
+import CalenderPage from "@/app/component/object/CalenderPage";
 
 
 export default function TestUI() {
