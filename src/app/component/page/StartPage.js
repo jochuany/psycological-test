@@ -34,7 +34,7 @@ export default function StartPage({ nextStep }) {
 
                 <Image src={blurCircleY} alt="" className="absolute bottom-0 translate-y-1/2"></Image>
 
-            </MobileFrame >
+            </MobileFrame>
         </>
     );
 }

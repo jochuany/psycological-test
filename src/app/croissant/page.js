@@ -62,7 +62,7 @@ export default function Croissant() {
     <div className="w-screen h-screen bg-gray-100 flex  justify-center items-center">
 
       {gameState.state == 0 && <StartPage nextStep={nextState}></StartPage>}  {/* 前面 true 的話，回傳 && 後面 */}
-      {gameState.state == 1 && <QuestionPage questionIndex={gameState.questionState}></QuestionPage>}
+      {gameState.state == 1 && <QuestionPage nextStep={nextState} questionIndex={gameState.questionState}></QuestionPage>}
       {gameState.state == 2 && <DisplayResultPage></DisplayResultPage>}
       {gameState.state == 3 && <ResultPage></ResultPage>}
 
