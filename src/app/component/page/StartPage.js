@@ -28,7 +28,8 @@ export default function StartPage({ nextStep }) {
                         現在，就來看看你是什麼等級的失控可頌吧。
                     </div>
 
-                    <Image src={startBtn} alt="START" onClick={nextStep} className="w-[100px]"></Image>
+                    <Image src={startBtn} alt="START" onClick={nextStep} className="w-[100px]
+                    hover:translate-y-0.5 transition cursor-pointer"></Image>
 
                 </div>
 
