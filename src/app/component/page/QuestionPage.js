@@ -12,24 +12,27 @@ import { usePsyStore, useQuestionStore } from "@/app/store/store";
 export default function QuestionPage({ questionIndex, nextStep }) {
 
     const questionData = useQuestionStore((state) => state);
+    const psyData = usePsyStore((state) => (state));
 
     const clickAnswer = function (option) {
         console.log("click");
+        psyData.updateScore(psyData.score + option.value)
         nextStep();
     }
 
-    const getMainColor = function () {
+    const getMainColor = function (prefix) {
         let colorString = "";
 
         if (questionIndex == 0) {
-            colorString = "#bee351"
+            colorString = prefix + "-[#bee351]";
         }
         else if (questionIndex == 1) {
-            colorString = "#dd3e3e"
+            colorString = prefix + "-[#dd3e3e]";
         }
         else {
-            colorString = "89bcff"
+            colorString = prefix + "-[#89bcff]";
         }
+        return colorString;
     }
 
     return (
@@ -48,7 +51,9 @@ export default function QuestionPage({ questionIndex, nextStep }) {
                         </div>
 
                         {/* question */}
-                        <div className="text-center font-bold text-xl text-[#90B62A]">{questionData.questions[questionIndex + 1].title}</div>
+                        <div className={`text-center font-bold text-xl ${getMainColor("text")}`}>
+                            {questionData.questions[questionIndex + 1].title}
+                        </div>
 
 
                         {/* options */}
@@ -57,14 +62,31 @@ export default function QuestionPage({ questionIndex, nextStep }) {
 
                                 return (
                                     <>
-                                        <div
-                                            className="bg-[#BEE351] w-full rounded-full text-white
-                                            py-[16px] text-xs flex justify-center items-center font-medium
-                                            shadow-[0px_4px_0px_1px_#90B62A] cursor-pointer hover:translate-y-0.5 transition"
-                                            onClick={() => clickAnswer(option)}
-                                            key={option.title}>
-                                            {option.title}
-                                        </div>
+                                        {questionIndex == 0 &&
+                                            <div className={`bg-[#BEE351] w-full rounded-full text-white
+                                                    py-[16px] text-xs flex justify-center items-center font-medium
+                                                    shadow-[0px_4px_0px_1px_#90B62A] cursor-pointer hover:translate-y-0.5 transition`}
+                                                onClick={() => clickAnswer(option)} key={option.title + "green"}>
+                                                {option.title}
+                                            </div>}
+                                        {questionIndex == 1 &&
+                                            <div
+                                                className={`bg-[#DD3E3E] w-full rounded-full text-white
+                                                    py-[16px] text-xs flex justify-center items-center font-medium
+                                                    shadow-[0px_4px_0px_1px_#8D4509] cursor-pointer hover:translate-y-0.5 transition`}
+                                                onClick={() => clickAnswer(option)} key={option.title + "red"}>
+                                                {option.title}
+                                            </div>
+                                        }
+                                        {questionIndex == 2 &&
+                                            <div
+                                                className={`bg-[#89BCFF] w-full rounded-full text-white
+                                                    py-[16px] text-xs flex justify-center items-center font-medium
+                                                    shadow-[0px_4px_0px_1px_#1098EC] cursor-pointer hover:translate-y-0.5 transition`}
+                                                onClick={() => clickAnswer(option)} key={option.title + "blue"}>
+                                                {option.title}
+                                            </div>
+                                        }
                                     </>
                                 )
                             })

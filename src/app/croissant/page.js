@@ -41,7 +41,7 @@ export default function Croissant() {
     if (psyState.state == 1) {
 
       //如果還沒超過題數，題數+1
-      if (psyState.questionState < psyState.totalQuestions) {
+      if (psyState.questionState < psyState.totalQuestions - 1) {
         psyState.updateQuestionState(psyState.questionState + 1);
         // setGameState({
         //   ...psyState,
@@ -75,15 +75,17 @@ export default function Croissant() {
 
     <div className="w-screen h-screen bg-gray-100 flex  justify-center items-center">
 
+      {psyState.score}
+
       {psyState.state == 0 && <StartPage nextStep={nextStep}></StartPage>}  {/* 前面 true 的話，回傳 && 後面 */}
       {psyState.state == 1 && <QuestionPage nextStep={nextStep} questionIndex={psyState.questionState}></QuestionPage>}
-      {psyState.state == 2 && <DisplayResultPage></DisplayResultPage>}
+      {psyState.state == 2 && <DisplayResultPage nextStep={nextStep} ></DisplayResultPage>}
       {psyState.state == 3 && <ResultPage></ResultPage>}
 
 
-      <div onClick={prevState}>PREV</div>
+      {/* <div onClick={prevState}>PREV</div> */}
 
-      <div onClick={nextStep}>NEXT</div>
+      {/* <div onClick={nextStep}>NEXT</div> */}
 
 
 
