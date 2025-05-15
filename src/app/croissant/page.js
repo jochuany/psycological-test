@@ -7,7 +7,9 @@ import QuestionPage from "../component/page/QuestionPage";
 import DisplayResultPage from "../component/page/DisplayResultPage";
 import ResultPage from "../component/page/ResultPage";
 
-import { usePsyStore } from "@/app/store/store";
+import { usePsyStore, useQuestionStore } from "@/app/store/store";
+
+
 
 export default function Croissant() {
 
