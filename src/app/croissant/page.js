@@ -73,19 +73,14 @@ export default function Croissant() {
 
   return (
 
-    <div className="w-screen h-screen bg-gray-100 flex  justify-center items-center">
 
-      {psyState.score}
+
+    <div className="w-screen h-screen bg-white flex  justify-center items-center">
 
       {psyState.state == 0 && <StartPage nextStep={nextStep}></StartPage>}  {/* 前面 true 的話，回傳 && 後面 */}
       {psyState.state == 1 && <QuestionPage nextStep={nextStep} questionIndex={psyState.questionState}></QuestionPage>}
       {psyState.state == 2 && <DisplayResultPage nextStep={nextStep} ></DisplayResultPage>}
       {psyState.state == 3 && <ResultPage></ResultPage>}
-
-
-      {/* <div onClick={prevState}>PREV</div> */}
-
-      {/* <div onClick={nextStep}>NEXT</div> */}
 
 
 
