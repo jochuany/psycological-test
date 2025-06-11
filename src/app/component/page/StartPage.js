@@ -15,7 +15,8 @@ export default function StartPage({ nextStep }) {
 
                 <div className="w-full h-full flex flex-col justify-center items-center gap-14">
 
-                    <div className="w-full text-center font-normal text-[#b58860] text-2xl">你是哪一種鮮奶茶？</div>
+                    <div className="w-full text-center font-medium text-[#b58860] text-2xl
+                    underline underline-offset-8 decoration-[#b58860] decoration-dotted decoration-4">你是哪一種鮮奶茶？</div>
 
                     <div className="text-[12px] font-normal text-[#b58860] text-center leading-6">
                         每個人心中都有一杯專屬的鮮奶茶<br /><br />
