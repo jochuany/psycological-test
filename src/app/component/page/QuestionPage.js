@@ -23,14 +23,18 @@ export default function QuestionPage({ questionIndex, nextStep }) {
 
     const optionButtonStyle = "w-full rounded-xl text-white py-[10px] text-xs font-normal flex justify-center items-center font-medium cursor-pointer transition";
 
+
+    const [hoverIndex, setHoverIndex] = useState(null);
+    const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
+
     return (
         <>
             <MobileFrame>
 
 
-                <div className="flex flex-col justify-start items-center gap-10">
+                <div className="w-full flex flex-col justify-start items-center gap-10">
 
-                    <div className="flex flex-col justify-center items-center gap-4">
+                    <div className="w-full flex flex-col justify-center items-center gap-4">
                         <div className="border-1 w-[40px] h-[40px] rounded-full flex justify-center items-center font-normal text-md"
                             style={{
                                 color: mainColors[questionIndex],
@@ -40,7 +44,7 @@ export default function QuestionPage({ questionIndex, nextStep }) {
                         </div>
 
                         {/* question */}
-                        <div className="text-center font-normal text-lg"
+                        <div className="w-full h-[60px] text-center font-normal text-lg"
                             style={{
                                 color: mainColors[questionIndex],
                             }}>
@@ -52,8 +56,9 @@ export default function QuestionPage({ questionIndex, nextStep }) {
                     {/* options */}
                     <div className="w-full flex flex-col gap-4">
                         {
-                            questionData.questions[questionIndex + 1].options.map((option) => {
-                                const [isHovering, setIsHovering] = useState(false);
+                            questionData.questions[questionIndex + 1].options.map((option, index) => {
+
+                                const isHovering = isDesktop && hoverIndex === index;
 
                                 return (
                                     <div
@@ -65,8 +70,8 @@ export default function QuestionPage({ questionIndex, nextStep }) {
                                         }}
                                         className={optionButtonStyle}
                                         onClick={() => clickAnswer(option)}
-                                        onMouseEnter={() => setIsHovering(true)}
-                                        onMouseLeave={() => setIsHovering(false)}
+                                        onMouseEnter={() => isDesktop && setHoverIndex(index)}
+                                        onMouseLeave={() => isDesktop && setHoverIndex(null)}
                                     >
                                         {option.title}
                                     </div>

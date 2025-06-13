@@ -11,7 +11,7 @@ import { usePsyStore, useQuestionStore } from "@/app/store/store";
 
 
 
-export default function Croissant() {
+export default function Home() {
 
   const psyState = usePsyStore((state) => state);
 
@@ -75,7 +75,7 @@ export default function Croissant() {
 
 
 
-    <div className="w-screen h-screen bg-white flex  justify-center items-center">
+    <div className="w-screen h-screen bg-[#f7f3ee] sm:bg-white flex justify-center items-center">
 
       {psyState.state == 0 && <StartPage nextStep={nextStep}></StartPage>}  {/* 前面 true 的話，回傳 && 後面 */}
       {psyState.state == 1 && <QuestionPage nextStep={nextStep} questionIndex={psyState.questionState}></QuestionPage>}

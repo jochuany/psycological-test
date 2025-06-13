@@ -1,11 +1,6 @@
 "use client"
 
-import Image from "next/image";
 import MobileFrame from "../layout/MobileFrame";
-
-import titleImg from "@/../public/0-start/title.svg";
-import startBtn from "@/../public/0-start/startBtn.png";
-import blurCircleY from "@/../public/0-start/blurCircleY.png";
 
 export default function StartPage({ nextStep }) {
     return (
