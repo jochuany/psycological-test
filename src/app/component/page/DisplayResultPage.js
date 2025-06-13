@@ -4,6 +4,7 @@ import MobileFrame from "../layout/MobileFrame";
 
 import { useState, useEffect } from "react";
 
+
 export default function DisplayResultPage({ nextStep }) {
 
     const [countDown, setCountDown] = useState(5);

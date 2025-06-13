@@ -93,6 +93,23 @@ const useQuestionStore = create((set) => ({
     },
 }))
 
+// 儲存測驗結果
+import { db } from "../fb/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+
+async function saveResult(resultType) {
+    try {
+        await addDoc(collection(db, "testResults"), {
+            resultType,
+            timestamp: serverTimestamp()
+        });
+    } catch (e) {
+        console.error("儲存失敗：", e);
+    }
+}
+
+export { saveResult }
+
 
 export { usePsyStore }
 
