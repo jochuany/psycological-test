@@ -85,8 +85,8 @@ export default function ResultPage() {
                             {(resultType == 5) && (<p className="text-white leading-6">你不喜歡走傳統路線，<br />追求與眾不同、充滿創意。<br />你總能在平凡中找到獨特風味，<br />像芝麻豆乳鮮奶茶般特別又難忘，<br />是生活中的另類靈感源泉。</p>)}
                         </div>
 
-                        <div className="text-white font-normal text-xs underline underline-offset-8 decoration-white">
-                            玩過的 {totalCount} 人裡<br />有 {sameTypeCount} 人也屬於這個類型！
+                        <div className="text-white font-normal text-xs underline underline-offset-4 decoration-white leading-6">
+                            ＊在其他 {totalCount - 1} 人裡，有 {sameTypeCount - 1} 人也是這杯！
                         </div>
 
                         <div className="flex justify-end">
@@ -97,8 +97,8 @@ export default function ResultPage() {
 
                     </div>
 
-                    <div className="px-4 py-1 transition cursor-pointer text-center text-white bg-[#b58860]
-                    rounded-xl text-sm hover:bg-[#f7f3ee] hover:text-[#b58860] border-1 border-[#b58860] font-normal"
+                    <div className="px-4 py-1 transition cursor-pointer text-center text-white bg-[#e17a4f]
+                    rounded-xl text-sm hover:bg-transparent hover:text-[#e17a4f] border-1 border-[#e17a4f] font-normal"
                         onClick={() => window.location.reload()}>
                         再測一次
                     </div>

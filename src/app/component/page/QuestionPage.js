@@ -19,7 +19,7 @@ export default function QuestionPage({ questionIndex, nextStep }) {
         nextStep();
     }
 
-    const mainColors = ["#c79d77", "#b17855", "#8ca57a", "#e17a4f", "#b793c3", "#a37d6e", "#837c78", "#9c8d80"];
+    const mainColors = ["#c79d77", "#bc827a", "#a06f80", "#e17a4f", "#b9a89b", "#a37d6e", "#837c78", "#a56b5b"];
 
     const optionButtonStyle = "w-full rounded-xl text-white py-[10px] text-xs font-normal flex justify-center items-center font-medium cursor-pointer transition";
 
@@ -64,7 +64,7 @@ export default function QuestionPage({ questionIndex, nextStep }) {
                                     <div
                                         key={option.title + questionIndex}
                                         style={{
-                                            backgroundColor: isHovering ? "#f7f3ee" : mainColors[questionIndex],
+                                            backgroundColor: isHovering ? "transparent" : mainColors[questionIndex],
                                             border: `1px solid ${mainColors[questionIndex]}`,
                                             color: isHovering ? mainColors[questionIndex] : "white"
                                         }}
