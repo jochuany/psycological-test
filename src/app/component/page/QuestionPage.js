@@ -31,16 +31,19 @@ export default function QuestionPage({ questionIndex, nextStep }) {
         <>
             <MobileFrame>
 
+                <img src="/bg-milktea.png" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px]" />
 
-                <div className="w-full flex flex-col justify-start items-center gap-10">
+                <div className="w-full flex flex-col justify-start items-center gap-10 z-10">
 
                     <div className="w-full flex flex-col justify-center items-center gap-4">
-                        <div className="border-1 w-[40px] h-[40px] rounded-full flex justify-center items-center font-normal text-md"
+
+                        {/* 題數 */}
+                        <div className="flex justify-center items-center font-bold text-sm"
                             style={{
                                 color: mainColors[questionIndex],
                                 borderColor: mainColors[questionIndex]
                             }}>
-                            Q{questionIndex + 1}
+                            Q{questionIndex + 1} / 8
                         </div>
 
                         {/* question */}

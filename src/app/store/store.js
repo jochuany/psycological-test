@@ -18,76 +18,76 @@ const usePsyStore = create((set) => ({
 const useQuestionStore = create((set) => ({
     questions: {
         "1": {
-            title: "忙碌了一天，下班（下課）後你最想做的事是？",
+            title: "忙碌了一天終於下班下課了，這時候你最想做的事是？",
             options: [
-                { title: "追劇放空一整晚", value: 1 },
-                { title: "與三五好友聚餐", value: 3 },
-                { title: "安靜地閱讀或寫日記", value: 5 },
-                { title: "馬上展開下一個副業或興趣計畫", value: 7 }
+                { title: "打開想看很久的劇，追劇放空一整晚", value: 1 },
+                { title: "立刻約朋友，一起來個不醉不歸的聚餐", value: 3 },
+                { title: "只想快快回家，安靜地閱讀或寫日記", value: 5 },
+                { title: "終於有空閒時間，開始副業或興趣計畫", value: 7 }
 
             ]
         },
         "2": {
-            title: "你和朋友約好要一起出門，但他突然臨時爽約，你會？",
+            title: "到了週末，你和朋友約好去看電影，但他臨時爽約，你會？",
             options: [
-                { title: "難過但能理解", value: 1 },
-                { title: "立刻約其他朋友代替", value: 3 },
-                { title: "默默覺得受傷但不說出口", value: 5 },
-                { title: "馬上調整計畫，時間不能浪費", value: 7 }
+                { title: "覺得難過但能理解，就待在家吧", value: 1 },
+                { title: "也沒什麼不好，立刻約其他朋友去看", value: 3 },
+                { title: "心裡默默受傷，但不說出口", value: 5 },
+                { title: "馬上調整計畫做別的事，時間不能浪費", value: 7 }
             ]
         },
         "3": {
-            title: "你即將要做一個重大的決定，這時你傾向？",
+            title: "在一件你很珍重的事情上，即將要做重大決定，這時你會？",
             options: [
-                { title: "聽從直覺", value: 1 },
-                { title: "先詢問別人的意見", value: 3 },
-                { title: "深思熟慮、考慮各種後果", value: 5 },
-                { title: "果斷迅速，勇敢承擔", value: 7 }
+                { title: "聽從直覺，心裡告訴我的就是對的", value: 1 },
+                { title: "先問問別人的意見，再自己慢慢思考", value: 3 },
+                { title: "深思熟慮、考慮各種後果後才決定", value: 5 },
+                { title: "果斷迅速，勇敢承擔，愛我所擇", value: 7 }
             ]
         },
         "4": {
             title: "如果你有一個禮拜的假期，以下哪一種旅行最吸引你？",
             options: [
-                { title: "慵懶海邊小鎮自由行", value: 1 },
-                { title: "熱鬧的城市文化探索", value: 3 },
-                { title: "靜謐的山中森林冥想", value: 5 },
-                { title: "自我挑戰型冒險旅程", value: 7 }
+                { title: "慵懶的海邊小鎮自由之旅", value: 1 },
+                { title: "熱鬧的城市文化探索之旅", value: 3 },
+                { title: "靜謐的山中森林冥想之旅", value: 5 },
+                { title: "刺激的自我挑戰冒險之旅", value: 7 }
             ]
         },
         "5": {
-            title: "平時生活中面對壓力時，你最常？",
+            title: "平時生活中面對壓力或艱難的事情時，你最常？",
             options: [
-                { title: "先睡一覺，明天再說", value: 1 },
-                { title: "找朋友聊聊宣洩情緒", value: 3 },
-                { title: "躲起來自己慢慢消化", value: 5 },
-                { title: "轉化成動力，做更多事來轉移注意力", value: 7 }
+                { title: "先睡一覺，明天再才有力氣應付", value: 1 },
+                { title: "找朋友聊聊，宣洩情緒、抒發壓力", value: 3 },
+                { title: "躲起來自己慢慢消化，總會找到方法", value: 5 },
+                { title: "壓力就是動力，做更多事來轉移注意力", value: 7 }
             ]
         },
         "6": {
-            title: "你覺得你的人際關係比較偏向哪種風格？",
+            title: "目前為止，你覺得你的人際關係比較偏向哪種風格？",
             options: [
-                { title: "和善不強求，喜歡自然相處", value: 1 },
-                { title: "熱情主動，喜歡主導話題", value: 3 },
-                { title: "安靜細膩，喜歡深入交流", value: 5 },
-                { title: "目標導向，重視效率與收穫", value: 7 }
+                { title: "和善不強求，喜歡自然相處，不擅長偽裝", value: 1 },
+                { title: "熱情主動，喜歡主導話題，我就是焦點", value: 3 },
+                { title: "安靜細膩，喜歡深入交流，談心才有意義", value: 5 },
+                { title: "目標導向，重視效率與收穫，各取所需", value: 7 }
             ]
         },
         "7": {
-            title: "遇到不熟的人想找你幫忙，你會？",
+            title: "某天一個不太熟的朋友想找你幫忙，你會？",
             options: [
-                { title: "覺得尷尬但還是幫", value: 1 },
-                { title: "樂於助人，看狀況", value: 3 },
-                { title: "慎重考慮後決定", value: 5 },
+                { title: "覺得尷尬但還是幫，積點陰德也不錯", value: 1 },
+                { title: "樂於助人，在能力範圍內盡力而為", value: 3 },
+                { title: "慎重考慮後決定，但拒絕會愧疚", value: 5 },
                 { title: "直接問對方的需求與預期，不浪費時間", value: 7 }
             ]
         },
         "8": {
-            title: "每天的生活都不一樣，但你最喜歡的生活節奏是？",
+            title: "每天的生活都不太一樣，但你最喜歡的生活節奏是？",
             options: [
-                { title: "悠閒自在、不被打擾最好", value: 1 },
-                { title: "有變化與互動的每一天", value: 3 },
-                { title: "穩定、規律、有掌控感", value: 5 },
-                { title: "快速進步、永不止步", value: 7 }
+                { title: "悠閒自在、不被打擾的生活最舒服", value: 1 },
+                { title: "每一天都要有變化、充滿很多人際互動", value: 3 },
+                { title: "穩定、規律、有掌控感，不失控", value: 5 },
+                { title: "快速進步、每天都要達成一點目標", value: 7 }
             ]
         }
     },

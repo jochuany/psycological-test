@@ -6,9 +6,9 @@ export default function StartPage({ nextStep }) {
     return (
         <>
             <MobileFrame>
+                <img src="/bg-milktea.png" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px]" />
 
-
-                <div className="w-full h-full flex flex-col justify-center items-center gap-14">
+                <div className="w-full h-full flex flex-col justify-center items-center gap-14 z-100">
 
                     <div className="w-full text-center font-medium text-[#e17a4f] text-2xl
                     underline underline-offset-8 decoration-[#e17a4f] decoration-dotted decoration-4">你是哪一種鮮奶茶？</div>
